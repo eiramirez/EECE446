@@ -4,7 +4,7 @@
 #include <sys/time.h>
 
 int main(void) {
-    // --- Task 1: Working with file descriptor sets ---
+    // Task 1: Working with file descriptor sets
     fd_set fdset;
     FD_ZERO(&fdset);               // Clear the set.
     FD_SET(STDIN_FILENO, &fdset);    // Add standard input.
@@ -16,7 +16,7 @@ int main(void) {
     else
         printf("NO\n");
     
-    // --- Task 2: Initializing a timeout of 1.35 seconds ---
+    // Task 2: Initializing a timeout of 1.35 seconds
     struct timeval tv;
     tv.tv_sec = 1;       // 1 second
     tv.tv_usec = 350000; // 350,000 microseconds = 0.35 seconds
